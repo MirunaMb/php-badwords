@@ -1,7 +1,11 @@
 <?php
-$paragraph = $_GET["paragraph"]; 
+$paragraph = $_GET["paragraph"];
+$word = $_GET["word-censored"];
+$censored = "***";
 
+$paragraph_censored = str_replace($word, $censored, $paragraph);
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -18,6 +22,13 @@ $paragraph = $_GET["paragraph"];
     <p>
         <?php echo "La tua frase ha : " . strlen($paragraph) . " caratteri"; ?>
     </p>
-</body>
 
+    <h2>Il testo censurato è :</h2>
+    <p>
+        <?php echo $paragraph_censored; ?>
+    </p>
+    <p>
+        <?php echo "Il nuovo paragrafo è lungo: " . strlen($paragraph_censored) . " caratteri"; ?>
+    </p>
+</body>
 </html>
