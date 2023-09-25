@@ -11,9 +11,13 @@ $paragraph = $_GET["paragraph"];
     <title>Form</title>
 </head>
 <body>
-    <?php
-    echo $paragraph;
-    ?>
+    <h2>La tua frase originale :</h2>
+    <p>
+        <?php echo $paragraph; ?>
+    </p>
+    <p>
+        <?php echo "La tua frase ha : " . strlen($paragraph) . " caratteri"; ?>
+    </p>
 </body>
 
 </html>
