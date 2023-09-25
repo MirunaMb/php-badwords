@@ -8,13 +8,21 @@
     <title>Bad Words</title>
 </head>
 
-
 <body>
-    <form method="GET" action="./script.php">
-        <label for="paragraph">Scrivi una frase </label>
-        <textarea class="paragraph" name="paragraph" id="paragraph"></textarea>
-        <button type="submit">Submit</button>
-    </form>
+    <div>
+        <form method="GET" action="./script.php">
+            <label for="paragraph">Scrivi una frase:</label>
+            <textarea type="text" name="paragraph" id="paragraph"></textarea>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+    <div>
+        <form method="GET" action="./script.php">
+            <label for="word-censored">Che parola vorresti censurare?</label>
+            <input type="text" name="word-censored" id="word-censored">
+            <button type="submit">Submit</button>
+        </form>
+    </div>
 </body>
 
 </html>
